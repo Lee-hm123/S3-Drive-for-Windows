@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "buckets": [
+    {
+      "id": "example-bucket",
+      "displayName": "Example S3 Bucket",
+      "remote": "s3remote:example-bucket",
+      "drive": "X:",
+      "rcPort": 5572,
+      "enabled": false,
+      "vfsCacheMode": "full",
+      "vfsWriteBack": "5s",
+      "vfsCacheMaxAge": "7d",
+      "vfsCachePollInterval": "1m",
+      "quotaTotalBytes": 0
+    }
+  ]
+}
