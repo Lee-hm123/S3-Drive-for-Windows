@@ -6,7 +6,11 @@
 
 $ErrorActionPreference = 'Stop'
 $ToolRoot = Split-Path -Parent $PSCommandPath
-$Rclone = Join-Path $ToolRoot 'rclone\rclone.exe'
+$Rclone = Join-Path $ToolRoot 'rclone.exe'
+# 兼容早期目录结构：若根目录不存在，仍可使用 rclone\rclone.exe。
+if (-not (Test-Path -LiteralPath $Rclone)) {
+    $Rclone = Join-Path $ToolRoot 'rclone\rclone.exe'
+}
 $ConfigPath = Join-Path $ToolRoot '配置.json'
 $BaseDir = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'S3Drive\buckets'
 $ProgramExitFile = Join-Path (Split-Path -Parent $BaseDir) 'exit.request'

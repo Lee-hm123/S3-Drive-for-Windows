@@ -127,7 +127,7 @@
 确认目录结构为：
 
 ```text
-rclone\rclone.exe
+rclone.exe
 ```
 
 ### 3️⃣ 创建 S3 remote
@@ -135,7 +135,7 @@ rclone\rclone.exe
 在本目录打开 PowerShell，运行：
 
 ```powershell
-.\rclone\rclone.exe config
+.\rclone.exe config
 ```
 
 选择 `n` 新建 remote，并按服务商文档填写 Provider、Endpoint、Region、Access Key ID 和 Secret Access Key。remote 名称可自定义，例如 `s3remote`。
@@ -414,7 +414,7 @@ rclone VFS 会根据应用的读取位置请求对象的相应字节范围，并
 
 | 文件 / 目录 | 作用 |
 | --- | --- |
-| `rclone\rclone.exe` | S3 连接、挂载、缓存和传输 |
+| `rclone.exe` | S3 连接、挂载、缓存和传输；放在工具根目录。 |
 | `配置.json` | 不含凭据的多桶挂载模板 |
 | `S3Drive管理器.ps1` | 托盘、挂载、状态、刷新、恢复和安全退出 |
 | `S3Drive审计.ps1` | 记录本地创建、删除和重命名 |
